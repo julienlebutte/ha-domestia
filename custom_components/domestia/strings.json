@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to a Domestia controller",
+        "description": "IP address of the Domestia DMC-008 controller on your local network.",
+        "data": {
+          "host": "IP address"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the controller at this address.",
+      "no_relays": "The controller did not report any relay."
+    },
+    "abort": {
+      "already_configured": "This controller is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Domestia",
+        "menu_options": {
+          "scan_interval": "Refresh interval",
+          "select_relay": "Edit a relay",
+          "finish": "Done"
+        }
+      },
+      "scan_interval": {
+        "title": "Refresh interval",
+        "data": {
+          "scan_interval": "Interval (seconds)"
+        }
+      },
+      "select_relay": {
+        "title": "Choose a relay",
+        "data": {
+          "relay": "Relay"
+        }
+      },
+      "edit_relay": {
+        "title": "Relay {relay}",
+        "data": {
+          "name": "Name",
+          "dimmable": "Dimmable",
+          "always_on": "Always on (not exposed as an entity)"
+        }
+      }
+    },
+    "abort": {
+      "no_relays": "No relay was discovered."
+    }
+  }
+}

@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 julienlebutte
+Copyright (c) 2026 Julien Lebutte
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+This project is a Python reimplementation of the Domestia DMC-008 wire
+protocol, originally reverse-engineered in Go by Victor Jacobs
+(https://github.com/victorjacobs/go-domestia). That repository carries no
+LICENSE file, so no explicit permission or license terms are being reused
+here; only the (unprotectable) protocol knowledge -- the meaning of the
+command bytes and frame checksum -- was carried over into this independent
+implementation. If you are Victor Jacobs and have concerns about this,
+please open an issue.

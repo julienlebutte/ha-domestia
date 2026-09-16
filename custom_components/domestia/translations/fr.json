@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connexion au contrôleur Domestia",
+        "description": "Adresse IP du contrôleur Domestia DMC-008 sur le réseau local.",
+        "data": {
+          "host": "Adresse IP"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de se connecter au contrôleur à cette adresse.",
+      "no_relays": "Le contrôleur n'a signalé aucun relais."
+    },
+    "abort": {
+      "already_configured": "Ce contrôleur est déjà configuré."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Domestia",
+        "menu_options": {
+          "scan_interval": "Fréquence de rafraîchissement",
+          "select_relay": "Modifier un relais",
+          "finish": "Terminer"
+        }
+      },
+      "scan_interval": {
+        "title": "Fréquence de rafraîchissement",
+        "data": {
+          "scan_interval": "Intervalle (secondes)"
+        }
+      },
+      "select_relay": {
+        "title": "Choisir un relais",
+        "data": {
+          "relay": "Relais"
+        }
+      },
+      "edit_relay": {
+        "title": "Relais {relay}",
+        "data": {
+          "name": "Nom",
+          "dimmable": "Variateur (dimmable)",
+          "always_on": "Toujours allumé (non exposé comme entité)"
+        }
+      }
+    },
+    "abort": {
+      "no_relays": "Aucun relais découvert."
+    }
+  }
+}
