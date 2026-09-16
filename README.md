@@ -1,6 +1,69 @@
+# Domestia for Home Assistant
+
+A native Home Assistant integration for a **Domestia DMC-012**/**Domestia DMC-008** lighting controller:
+talks directly to the controller over TCP (no external bridge, no MQTT broker required),
+configured entirely from the Home Assistant UI, with automatic relay discovery.
+
+A Python reimplementation of the protocol used by the Go project
+[go-domestia](https://github.com/victorjacobs/go-domestia) (now archived).
+
+## Features
+
+- Added and configured 100% through the Home Assistant UI (no YAML)
+- Automatically discovers how many relays the controller manages
+- One `light` entity created per relay, with a generic name (`Domestia relay N`) until
+  you rename it
+- A **Configure** screen to rename a relay, mark it dimmable, or flag it as "always on"
+  (not exposed as an entity, but kept at full brightness)
+- A single grouped poll (one network round trip) for every relay, however many there are
+  (tested with ~30 relays)
+
+## Installation via HACS
+
+1. In HACS, ⋮ menu → **Custom repositories** → add this repository's URL, category
+   *Integration*.
+2. Search for "Domestia" in HACS → **Download**.
+3. Restart Home Assistant.
+4. **Settings → Devices & services → Add integration → Domestia**, enter the
+   controller's IP address.
+
+## Manual installation
+
+Copy the `custom_components/domestia` folder from this repository into
+`<Home Assistant config>/custom_components/`, restart HA, then add the integration as
+above.
+
+## Configuration
+
+No YAML is needed. Once the integration is added, the **Configure** button on its card
+(Settings → Devices & services) lets you:
+
+- pick the refresh interval (10 seconds by default)
+- edit a specific relay: display name, dimmable or not (`dimmable`), always-on
+  (`always_on`)
+
+Relays you haven't customized stay visible with their generic name and a default
+**non-dimmable** (simple on/off) behavior, not always-on — turn on `dimmable` for the
+relays that actually support it.
+
+## License
+
+See [LICENSE](LICENSE).
+
+## Acknowledgments
+
+This project is a Python reimplementation of the Domestia DMC-008 wire protocol
+originally reverse-engineered in Go by **Victor Jacobs** in
+[go-domestia](https://github.com/victorjacobs/go-domestia) (now archived). His work
+figuring out the controller's binary framing and command bytes made this Home Assistant
+integration possible — thank you for documenting it. This repository carries no code
+copied from that project (its own repository has no LICENSE file to reuse); only the
+protocol knowledge was carried over, reimplemented independently in Python.
+
+
 # Domestia pour Home Assistant
 
-Intégration Home Assistant native pour un contrôleur d'éclairage **Domestia DMC-008** :
+Intégration Home Assistant native pour un contrôleur d'éclairage **Domestia DMC-012**/**Domestia DMC-008** :
 communication directe en TCP avec le contrôleur (aucun bridge externe, aucun broker MQTT
 requis), configuration entièrement depuis l'interface Home Assistant, et découverte
 automatique des relais.
