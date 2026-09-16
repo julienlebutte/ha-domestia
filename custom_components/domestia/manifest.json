@@ -1,9 +1,9 @@
 {
   "domain": "domestia",
   "name": "Domestia",
-  "documentation": "https://github.com/<TON-PSEUDO-GITHUB>/ha-domestia",
-  "issue_tracker": "https://github.com/<TON-PSEUDO-GITHUB>/ha-domestia/issues",
-  "codeowners": ["@<TON-PSEUDO-GITHUB>"],
+  "documentation": "https://github.com/julienlebutte/ha-domestia",
+  "issue_tracker": "https://github.com/julienlebutte/ha-domestia/issues",
+  "codeowners": ["@julienlebutte"],
   "requirements": [],
   "version": "0.2.0",
   "iot_class": "local_polling",
